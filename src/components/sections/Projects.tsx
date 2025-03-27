@@ -12,7 +12,6 @@ type Project = {
     github?: string;
     live?: string;
   };
-  accentColor: string;
 };
 
 const Projects = () => {
@@ -28,8 +27,7 @@ const Projects = () => {
       links: {
         github: "#",
         live: "#"
-      },
-      accentColor: "bg-accent-sky/20 border-accent-sky/40"
+      }
     },
     {
       id: 2,
@@ -39,8 +37,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1661956602868-6ae368943878?auto=format&fit=crop&q=80&w=2070",
       links: {
         github: "#"
-      },
-      accentColor: "bg-accent-mint/20 border-accent-mint/40"
+      }
     },
     {
       id: 3,
@@ -51,8 +48,7 @@ const Projects = () => {
       links: {
         github: "#",
         live: "#"
-      },
-      accentColor: "bg-accent-lavender/20 border-accent-lavender/40"
+      }
     },
     {
       id: 4,
@@ -62,8 +58,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=2070",
       links: {
         github: "#"
-      },
-      accentColor: "bg-accent-teal/20 border-accent-teal/40"
+      }
     },
   ];
 
@@ -72,37 +67,13 @@ const Projects = () => {
   const filteredProjects = activeFilter === "Tous" 
     ? projects 
     : projects.filter(project => project.tags.includes(activeFilter));
-    
-  const getFilterColor = (filter: string) => {
-    if (filter === activeFilter) {
-      return "bg-primary text-primary-foreground";
-    }
-    
-    switch (filter) {
-      case "BTS":
-        return "bg-accent-sky/20 text-gray-700 hover:bg-accent-sky/40";
-      case "Bachelor":
-        return "bg-accent-mint/20 text-gray-700 hover:bg-accent-mint/40";
-      case "Stage":
-        return "bg-accent-teal/20 text-gray-700 hover:bg-accent-teal/40";
-      case "Alternance":
-        return "bg-accent-lavender/20 text-gray-700 hover:bg-accent-lavender/40";
-      default:
-        return "bg-secondary text-secondary-foreground hover:bg-secondary/80";
-    }
-  };
 
   return (
     <section id="projects" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16 reveal">
           <p className="section-subtitle mb-2">Mon travail</p>
-          <h2 className="section-title mb-6">
-            <span className="relative inline-block">
-              Projets réalisés
-              <span className="absolute bottom-1 left-0 w-full h-2 bg-accent-lavender/40 -z-10"></span>
-            </span>
-          </h2>
+          <h2 className="section-title mb-6">Projets réalisés</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Découvrez mes projets scolaires et professionnels réalisés pendant mon BTS SIO SLAM, mon Bachelor CSI, 
             mes stages et mon alternance chez Kubii.
@@ -115,7 +86,11 @@ const Projects = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full text-sm transition-all ${getFilterColor(filter)}`}
+              className={`px-4 py-2 rounded-full text-sm transition-all ${
+                activeFilter === filter
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+              }`}
             >
               {filter}
             </button>
@@ -127,7 +102,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className={`rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1 reveal ${project.accentColor} border`}
+              className="rounded-lg overflow-hidden bg-card shadow-sm transition-all hover:shadow-md hover:-translate-y-1 reveal"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="aspect-video overflow-hidden">
@@ -142,7 +117,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span 
                       key={tag} 
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent-sky/10 text-blue-deep"
+                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary text-secondary-foreground"
                     >
                       <Tag className="w-3 h-3 mr-1" />
                       {tag}
@@ -157,7 +132,7 @@ const Projects = () => {
                       href={project.links.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-medium text-blue-deep hover:text-blue-deep/80 transition-colors"
+                      className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code source
@@ -168,7 +143,7 @@ const Projects = () => {
                       href={project.links.live} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-medium text-blue-deep hover:text-blue-deep/80 transition-colors"
+                      className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Voir le projet

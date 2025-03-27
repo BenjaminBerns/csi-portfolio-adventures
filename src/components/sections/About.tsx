@@ -28,28 +28,24 @@ const About = () => {
 
   const skills = [
     { 
-      icon: <Monitor className="w-6 h-6 mb-4 text-accent-sky" />,
+      icon: <Monitor className="w-6 h-6 mb-4" />,
       title: "Front-End", 
-      items: ["HTML/CSS", "JavaScript", "React", "Vue.js", "Tailwind CSS"],
-      bgClass: "bg-accent-sky/20 border-accent-sky/40 shadow-sm shadow-accent-sky/20"
+      items: ["HTML/CSS", "JavaScript", "React", "Vue.js", "Tailwind CSS"] 
     },
     { 
-      icon: <Server className="w-6 h-6 mb-4 text-accent-mint" />,
+      icon: <Server className="w-6 h-6 mb-4" />,
       title: "Back-End", 
-      items: ["Node.js", "PHP", "Python", "MySQL", "MongoDB"],
-      bgClass: "bg-accent-mint/20 border-accent-mint/40 shadow-sm shadow-accent-mint/20" 
+      items: ["Node.js", "PHP", "Python", "MySQL", "MongoDB"] 
     },
     { 
-      icon: <Code className="w-6 h-6 mb-4 text-accent-lavender" />,
+      icon: <Code className="w-6 h-6 mb-4" />,
       title: "Langages", 
-      items: ["Java", "C#", "Python", "JavaScript", "PHP"],
-      bgClass: "bg-accent-lavender/20 border-accent-lavender/40 shadow-sm shadow-accent-lavender/20"
+      items: ["Java", "C#", "Python", "JavaScript", "PHP"] 
     },
     { 
-      icon: <Book className="w-6 h-6 mb-4 text-accent-teal" />,
+      icon: <Book className="w-6 h-6 mb-4" />,
       title: "Formations", 
-      items: ["Bachelor CSI (en cours)", "BTS SIO SLAM", "Certifications diverses"],
-      bgClass: "bg-accent-teal/20 border-accent-teal/40 shadow-sm shadow-accent-teal/20"
+      items: ["Bachelor CSI (en cours)", "BTS SIO SLAM", "Certifications diverses"] 
     }
   ];
 
@@ -58,12 +54,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 reveal">
           <p className="section-subtitle mb-2">Qui suis-je</p>
-          <h2 className="section-title mb-6">
-            <span className="relative inline-block">
-              À propos de moi
-              <span className="absolute bottom-1 left-0 w-full h-2 bg-accent-teal/40 -z-10"></span>
-            </span>
-          </h2>
+          <h2 className="section-title mb-6">À propos de moi</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Passionné par l'informatique et le développement, je suis actuellement étudiant en Bachelor CSI après avoir obtenu un BTS SIO SLAM. 
             J'ai acquis de l'expérience professionnelle à travers deux stages et une alternance en tant que développeur chez Kubii.
@@ -74,7 +65,7 @@ const About = () => {
           {skills.map((skill, index) => (
             <div 
               key={skill.title}
-              className={`${skill.bgClass} rounded-lg p-6 border text-center reveal card-hover`}
+              className="bg-background rounded-lg p-6 shadow-sm text-center reveal card-hover"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex justify-center">{skill.icon}</div>
@@ -91,8 +82,8 @@ const About = () => {
         </div>
         
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
-          <div className="p-6 rounded-lg border border-accent-sky/20 bg-accent-sky/5">
-            <h3 className="text-2xl font-semibold mb-4 text-blue-deep">Mon parcours</h3>
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">Mon parcours</h3>
             <p className="text-muted-foreground mb-6">
               Après mon BTS SIO SLAM (Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers), 
               j'ai choisi de poursuivre mes études avec un Bachelor CSI pour approfondir mes connaissances et compétences dans le domaine de l'informatique.
@@ -103,8 +94,8 @@ const About = () => {
             </p>
           </div>
           
-          <div className="p-6 rounded-lg border border-accent-lavender/20 bg-accent-lavender/5">
-            <h3 className="text-2xl font-semibold mb-4 text-blue-deep">Mes objectifs</h3>
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">Mes objectifs</h3>
             <p className="text-muted-foreground mb-6">
               Mon objectif principal est de continuer à me développer en tant que développeur full stack, en restant à jour
               avec les dernières technologies et les meilleures pratiques du secteur.
