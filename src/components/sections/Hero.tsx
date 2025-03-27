@@ -34,7 +34,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex flex-col justify-center items-center relative px-6"
     >
-      <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-b from-accent/30 to-transparent rounded-bl-full opacity-30 blur-3xl -z-10" />
+      <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-b from-blue-soft to-transparent rounded-bl-full opacity-40 blur-3xl -z-10" />
       
       <div className="text-center max-w-4xl mx-auto">
         <p className="text-sm md:text-base font-medium text-muted-foreground mb-4" ref={subtitleRef} style={{ opacity: 0 }}>
@@ -62,13 +62,13 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4" ref={ctaRef} style={{ opacity: 0 }}>
           <a 
             href="#projects" 
-            className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:-translate-y-1"
+            className="bg-blue-deep text-primary-foreground px-8 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:-translate-y-1"
           >
             Voir mes projets
           </a>
           <a 
             href="#contact" 
-            className="bg-secondary text-secondary-foreground px-8 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:-translate-y-1"
+            className="bg-blue-light text-secondary-foreground px-8 py-3 rounded-md font-medium transition-all hover:shadow-lg hover:-translate-y-1"
           >
             Me contacter
           </a>
