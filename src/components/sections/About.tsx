@@ -31,25 +31,25 @@ const About = () => {
       icon: <Monitor className="w-6 h-6 mb-4 text-accent-sky" />,
       title: "Front-End", 
       items: ["HTML/CSS", "JavaScript", "React", "Vue.js", "Tailwind CSS"],
-      bgClass: "bg-accent-sky/10"
+      bgClass: "bg-accent-sky/20 border-accent-sky/40 shadow-sm shadow-accent-sky/20"
     },
     { 
       icon: <Server className="w-6 h-6 mb-4 text-accent-mint" />,
       title: "Back-End", 
       items: ["Node.js", "PHP", "Python", "MySQL", "MongoDB"],
-      bgClass: "bg-accent-mint/10" 
+      bgClass: "bg-accent-mint/20 border-accent-mint/40 shadow-sm shadow-accent-mint/20" 
     },
     { 
       icon: <Code className="w-6 h-6 mb-4 text-accent-lavender" />,
       title: "Langages", 
       items: ["Java", "C#", "Python", "JavaScript", "PHP"],
-      bgClass: "bg-accent-lavender/10"
+      bgClass: "bg-accent-lavender/20 border-accent-lavender/40 shadow-sm shadow-accent-lavender/20"
     },
     { 
       icon: <Book className="w-6 h-6 mb-4 text-accent-teal" />,
       title: "Formations", 
       items: ["Bachelor CSI (en cours)", "BTS SIO SLAM", "Certifications diverses"],
-      bgClass: "bg-accent-teal/10"
+      bgClass: "bg-accent-teal/20 border-accent-teal/40 shadow-sm shadow-accent-teal/20"
     }
   ];
 
@@ -74,7 +74,7 @@ const About = () => {
           {skills.map((skill, index) => (
             <div 
               key={skill.title}
-              className={`${skill.bgClass} rounded-lg p-6 shadow-sm text-center reveal card-hover`}
+              className={`${skill.bgClass} rounded-lg p-6 border text-center reveal card-hover`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex justify-center">{skill.icon}</div>

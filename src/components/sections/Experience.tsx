@@ -131,7 +131,7 @@ const Experience = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 h-full w-px bg-gradient-to-b from-accent-sky via-accent-lavender to-accent-mint -ml-px md:ml-0 hidden md:block"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 h-full w-1 bg-gradient-to-b from-accent-sky via-accent-lavender to-accent-mint transform -translate-x-1/2 hidden md:block"></div>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -142,7 +142,7 @@ const Experience = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className={`absolute left-0 md:left-1/2 top-0 w-7 h-7 rounded-full ${exp.accentColor} border-2 border-white shadow-md -ml-3 md:-ml-3.5 hidden md:block pulse-element`}></div>
+                <div className={`absolute left-0 md:left-1/2 top-0 w-7 h-7 rounded-full ${exp.accentColor} border-2 border-white shadow-md transform -translate-x-1/2 hidden md:block pulse-element z-10`}></div>
                 
                 {/* Content */}
                 <div className="md:w-1/2 pl-10 md:pl-0 md:pr-12 md:text-right">
