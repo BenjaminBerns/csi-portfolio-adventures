@@ -10,6 +10,7 @@ type Experience = {
   period: string;
   description: string[];
   type: "alternance" | "stage" | "education";
+  accentColor: string;
 };
 
 const Experience = () => {
@@ -25,7 +26,8 @@ const Experience = () => {
         "Participation à l'intégration continue et au déploiement (CI/CD)",
         "Collaboration avec les équipes de design et de produit"
       ],
-      type: "alternance"
+      type: "alternance",
+      accentColor: "bg-accent-lavender/50"
     },
     {
       id: 2,
@@ -38,7 +40,8 @@ const Experience = () => {
         "Utilisation de Vue.js pour le front-end et Laravel pour le back-end",
         "Mise en place d'une API RESTful"
       ],
-      type: "stage"
+      type: "stage",
+      accentColor: "bg-accent-teal/50"
     },
     {
       id: 3,
@@ -51,7 +54,8 @@ const Experience = () => {
         "Intégration de maquettes Figma en HTML/CSS/JavaScript",
         "Optimisation des performances et de l'accessibilité"
       ],
-      type: "stage"
+      type: "stage",
+      accentColor: "bg-accent-teal/50"
     },
     {
       id: 4,
@@ -64,7 +68,8 @@ const Experience = () => {
         "Projets pratiques en équipe sur des cas réels d'entreprise",
         "Étude des architectures cloud et DevOps"
       ],
-      type: "education"
+      type: "education",
+      accentColor: "bg-accent-mint/50"
     },
     {
       id: 5,
@@ -77,7 +82,8 @@ const Experience = () => {
         "Développement d'applications, bases de données, programmation objet",
         "Projets professionnels et stages en entreprise"
       ],
-      type: "education"
+      type: "education",
+      accentColor: "bg-accent-sky/50"
     }
   ];
 
@@ -96,11 +102,11 @@ const Experience = () => {
   const getTypeColor = (type: string) => {
     switch (type) {
       case "alternance":
-        return "bg-blue-50 text-blue-700 border-blue-200";
+        return "bg-accent-lavender/20 text-gray-700 border-accent-lavender/30";
       case "stage":
-        return "bg-green-50 text-green-700 border-green-200";
+        return "bg-accent-teal/20 text-gray-700 border-accent-teal/30";
       case "education":
-        return "bg-amber-50 text-amber-700 border-amber-200";
+        return "bg-accent-mint/20 text-gray-700 border-accent-mint/30";
       default:
         return "bg-gray-50 text-gray-700 border-gray-200";
     }
@@ -111,7 +117,12 @@ const Experience = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16 reveal">
           <p className="section-subtitle mb-2">Mon parcours</p>
-          <h2 className="section-title mb-6">Expérience professionnelle et formation</h2>
+          <h2 className="section-title mb-6">
+            <span className="relative inline-block">
+              Expérience professionnelle et formation
+              <span className="absolute bottom-1 left-0 w-full h-2 bg-accent-mint/40 -z-10"></span>
+            </span>
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Mon parcours combine formation académique en informatique et expériences professionnelles 
             en développement à travers stages et alternance.
@@ -120,7 +131,7 @@ const Experience = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 h-full w-px bg-border -ml-px md:ml-0 hidden md:block"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 h-full w-px bg-gradient-to-b from-accent-sky via-accent-lavender to-accent-mint -ml-px md:ml-0 hidden md:block"></div>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -131,7 +142,7 @@ const Experience = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-7 h-7 rounded-full bg-background border-2 border-primary -ml-3 md:-ml-3.5 hidden md:block"></div>
+                <div className={`absolute left-0 md:left-1/2 top-0 w-7 h-7 rounded-full ${exp.accentColor} border-2 border-white shadow-md -ml-3 md:-ml-3.5 hidden md:block pulse-element`}></div>
                 
                 {/* Content */}
                 <div className="md:w-1/2 pl-10 md:pl-0 md:pr-12 md:text-right">
@@ -143,7 +154,7 @@ const Experience = () => {
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold">{exp.role}</h3>
+                  <h3 className="text-xl font-semibold text-blue-deep">{exp.role}</h3>
                   <div className="flex items-center md:justify-end space-x-2 text-muted-foreground">
                     <span>{exp.company}</span>
                     <span>•</span>
@@ -162,7 +173,7 @@ const Experience = () => {
                 </div>
                 
                 <div className="md:w-1/2 pl-10 md:pl-12">
-                  <div className="text-sm text-muted-foreground mb-3">{exp.period}</div>
+                  <div className="text-sm text-blue-medium font-medium mb-3">{exp.period}</div>
                   <ul className="space-y-2">
                     {exp.description.map((item, i) => (
                       <li key={i} className="text-muted-foreground">
