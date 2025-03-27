@@ -51,21 +51,21 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Réseaux</h3>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://github.com/BenjaminBerns" 
                 aria-label="GitHub"
                 className="bg-background p-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/benjamin-berns-076445262/" 
                 aria-label="LinkedIn"
                 className="bg-background p-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:contact@example.com" 
+                href="benjiberns@mail.fr" 
                 aria-label="Email"
                 className="bg-background p-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
               >

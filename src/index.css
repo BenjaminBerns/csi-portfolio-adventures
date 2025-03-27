@@ -16,8 +16,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 100% 50%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 265 100% 50%; /* Violet bien saturé, intense */
+    --primary-foreground: 265 40% 98%; /* Violet très pâle pour le contraste */
+
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -46,11 +47,18 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Couleurs bleu doux */
-    --blue-soft: 210 75% 92%;
-    --blue-light: 210 70% 80%;
-    --blue-medium: 210 65% 65%;
-    --blue-deep: 210 60% 50%;
+    /* Couleurs violet doux */
+    --blue-soft: 270 75% 92%;
+    --blue-light: 270 70% 80%;
+    --blue-medium: 270 65% 65%;
+    --blue-deep: 270 60% 50%;
+
+    
+    /* Nouvelles couleurs d'accent */
+    --accent-teal: 180 70% 85%;
+    --accent-lavender: 250 70% 90%;
+    --accent-mint: 160 70% 90%;
+    --accent-sky: 195 70% 85%;
   }
 
   * {
@@ -129,4 +137,152 @@
   .text-blue-deep {
     color: hsl(var(--blue-deep));
   }
+
+  /* Nouvelles classes pour les accents de couleur */
+  .bg-accent-teal {
+    background-color: hsl(var(--accent-teal));
+  }
+  
+  .bg-accent-lavender {
+    background-color: hsl(var(--accent-lavender));
+  }
+  
+  .bg-accent-mint {
+    background-color: hsl(var(--accent-mint));
+  }
+  
+  .bg-accent-sky {
+    background-color: hsl(var(--accent-sky));
+  }
+  
+  .text-accent-teal {
+    color: #7cff77;
+  }
+  
+  .text-accent-lavender {
+    color: #779bff;
+  }
+  
+  .text-accent-mint {
+    color: #d877ff;
+  }
+  
+  .text-accent-sky {
+    color: rgb(175, 144, 97);
+  }
+  
+  /* Animations colorées */
+  .color-shift-bg {
+    background-size: 200% 200%;
+    animation: color-shift 8s ease infinite;
+  }
+  
+  .floating-element {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  .pulse-element {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .gradient-border {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 2px;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: 
+      linear-gradient(hsl(var(--blue-soft)), hsl(var(--blue-light))),
+      linear-gradient(hsl(var(--accent-teal)), hsl(var(--accent-sky))),
+      linear-gradient(hsl(var(--blue-medium)), hsl(var(--blue-deep))),
+      linear-gradient(hsl(var(--accent-mint)), hsl(var(--accent-lavender)));
+    animation: rotate 5s linear infinite;
+  }
+  
+  .gradient-border::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    top: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: white;
+    border-radius: inherit;
+  }
+  
+  /* Keyframes pour les animations */
+  @keyframes color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+  
+  /* Gradients de fond */
+  .bg-gradient-soft {
+    background: linear-gradient(135deg, 
+      hsl(var(--blue-soft)) 0%, 
+      hsl(var(--accent-teal)) 50%, 
+      hsl(var(--blue-light)) 100%);
+  }
+  
+  .bg-gradient-cool {
+    background: linear-gradient(135deg, 
+      hsl(var(--accent-sky)) 0%, 
+      hsl(var(--blue-medium)) 50%, 
+      hsl(var(--accent-lavender)) 100%);
+  }
 }
+

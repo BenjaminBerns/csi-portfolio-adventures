@@ -12,6 +12,7 @@ type Project = {
     github?: string;
     live?: string;
   };
+  accentColor: string;
 };
 
 const Projects = () => {
@@ -20,45 +21,61 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Application de Gestion",
-      description: "Une application complète de gestion de stocks avec interface utilisateur réactive développée pendant mon BTS SIO SLAM.",
-      tags: ["BTS", "React", "Node.js", "MySQL"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+      title: "Aide à la création d'un site web sur CMS",
+      description: "Un site proposant du contenu en lien avec la profession de psychologue.",
+      tags: ["Stage", "HTML/CSS", "PHP", "SQL", "BDD"],
+      image: "../../public/code-1839406_1280.jpg",
       links: {
-        github: "#",
-        live: "#"
-      }
+        github: "",
+        live: "https://www.fabienneballet-psychologue.fr/"
+      },
+      accentColor: "bg-accent-sky/20 border-accent-sky/40"
     },
     {
       id: 2,
-      title: "Portfolio E-commerce",
-      description: "Site e-commerce développé dans le cadre de mon parcours en Bachelor CSI, incluant panier, paiement et gestion des commandes.",
-      tags: ["Bachelor", "Vue.js", "PHP", "MySQL"],
-      image: "https://images.unsplash.com/photo-1661956602868-6ae368943878?auto=format&fit=crop&q=80&w=2070",
+      title: "Projet FSI",
+      description: "Application C# développé avec une interface WinForm permettant la gestion d'un tutorat",
+      tags: ["BTS", "C#", "PLpgSQL"],
+      image: "../../FSI_logo.png",
       links: {
-        github: "#"
-      }
+        github: "https://github.com/BenjaminBerns/FSI_Administration"
+      },
+      accentColor: "bg-accent-mint/20 border-accent-mint/40"
     },
     {
       id: 3,
-      title: "API RESTful",
-      description: "Développement d'une API RESTful pour un système de réservation, projet réalisé lors de mon alternance chez Kubii.",
-      tags: ["Alternance", "Node.js", "Express", "MongoDB"],
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=2070",
+      title: "Jeu de GO",
+      description: "Développement d'un Jeu de go fonctionnant avec Angular et enregistrer par localStorage",
+      tags: ["Bachelor", "Node.js", "Angular", "TypeScript"],
+      image: "../../go.png",
       links: {
-        github: "#",
-        live: "#"
-      }
+        github: "https://github.com/BenjaminBerns/Go",
+        live: ""
+      },
+      accentColor: "bg-accent-lavender/20 border-accent-lavender/40"
     },
     {
       id: 4,
-      title: "Application Mobile",
-      description: "Application mobile développée pendant mon stage, permettant aux utilisateurs de consulter et gérer leurs rendez-vous.",
-      tags: ["Stage", "React Native", "Firebase"],
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=2070",
+      title: "Application Web MVC ",
+      description: "Application web développée avec PHP basé sur un model MVC. Ce projet m'a permis d'apprendre a utiliser la librairie de google fullcalendar mais aussi la librairie d'alertes Sweet2Alert et GSAP",
+      tags: ["Bachelor", "PHP", "MVC", "PLpgSQL"],
+      image: "../../calendar.png",
       links: {
-        github: "#"
-      }
+        github: "https://github.com/RomainBAU/TeamKinderPingouinsDispOLEN"
+      },
+      accentColor: "bg-accent-teal/20 border-accent-teal/40"
+    },
+    {
+      id: 5,
+      title: "Site référentiel produits",
+      description: "Dans le cadre de mon alternance, j'ai été ammené à proposer des solutions pour améliorer le SAV. Le site que j'ai proposé réperiore tout les produits que nous proposons dans notre boutique accompagné de message de procédure de tests à distance à effectuer avant renvoie de produit",
+      tags: ["Alternance", "???", "???", "???"],
+      image: "../../kubiii.png",
+      links: {
+        github: "https://github.com/RomainBAU/TeamKinderPingouinsDispOLEN",
+        live: "https://www.figma.com/design/XGP7iFSa2oMIQZNf0hcJmt/Untitled?node-id=0-1&p=f&t=8mXw7NaSOZiXmZOi-0"
+      },
+      accentColor: "bg-accent-teal/20 border-accent-teal/40"
     },
   ];
 
@@ -67,16 +84,39 @@ const Projects = () => {
   const filteredProjects = activeFilter === "Tous" 
     ? projects 
     : projects.filter(project => project.tags.includes(activeFilter));
+    
+  const getFilterColor = (filter: string) => {
+    if (filter === activeFilter) {
+      return "bg-primary text-primary-foreground";
+    }
+    
+    switch (filter) {
+      case "BTS":
+        return "bg-accent-sky/20 text-gray-700 hover:bg-accent-sky/40";
+      case "Bachelor":
+        return "bg-accent-mint/20 text-gray-700 hover:bg-accent-mint/40";
+      case "Stage":
+        return "bg-accent-teal/20 text-gray-700 hover:bg-accent-teal/40";
+      case "Alternance":
+        return "bg-accent-lavender/20 text-gray-700 hover:bg-accent-lavender/40";
+      default:
+        return "bg-secondary text-secondary-foreground hover:bg-secondary/80";
+    }
+  };
 
   return (
     <section id="projects" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16 reveal">
           <p className="section-subtitle mb-2">Mon travail</p>
-          <h2 className="section-title mb-6">Projets réalisés</h2>
+          <h2 className="section-title mb-6">
+            <span className="relative inline-block">
+              Projets réalisés
+              <span className="absolute bottom-1 left-0 w-full h-2 bg-accent-lavender/40 -z-10"></span>
+            </span>
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Découvrez mes projets scolaires et professionnels réalisés pendant mon BTS SIO SLAM, mon Bachelor CSI, 
-            mes stages et mon alternance chez Kubii.
+            Découvrez mes projets scolaires et professionnels réalisés entre 2022 et 2025.
           </p>
         </div>
         
@@ -86,11 +126,7 @@ const Projects = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full text-sm transition-all ${
-                activeFilter === filter
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+              className={`px-4 py-2 rounded-full text-sm transition-all ${getFilterColor(filter)}`}
             >
               {filter}
             </button>
@@ -102,7 +138,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="rounded-lg overflow-hidden bg-card shadow-sm transition-all hover:shadow-md hover:-translate-y-1 reveal"
+              className={`rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-1 reveal ${project.accentColor} border`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="aspect-video overflow-hidden">
@@ -117,7 +153,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span 
                       key={tag} 
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary text-secondary-foreground"
+                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent-sky/10 text-blue-deep"
                     >
                       <Tag className="w-3 h-3 mr-1" />
                       {tag}
@@ -132,7 +168,7 @@ const Projects = () => {
                       href={project.links.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      className="inline-flex items-center text-sm font-medium text-blue-deep hover:text-blue-deep/80 transition-colors"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code source
@@ -143,7 +179,7 @@ const Projects = () => {
                       href={project.links.live} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      className="inline-flex items-center text-sm font-medium text-blue-deep hover:text-blue-deep/80 transition-colors"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Voir le projet
