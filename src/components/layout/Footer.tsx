@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Portfolio professionnel d'un développeur spécialisé en CSI et SIO SLAM.
+              Portfolio professionnel d'un développeur spécialisé Web.
             </p>
           </div>
           
