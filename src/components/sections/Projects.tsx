@@ -24,7 +24,7 @@ const Projects = () => {
       title: "Aide à la création d'un site web sur CMS",
       description: "Un site proposant du contenu en lien avec la profession de psychologue.",
       tags: ["Stage", "HTML/CSS", "PHP", "SQL", "BDD"],
-      image: "../../public/code-1839406_1280.jpg",
+      image: "../../public/code.jpg",
       links: {
         github: "",
         live: "https://www.fabienneballet-psychologue.fr/"
