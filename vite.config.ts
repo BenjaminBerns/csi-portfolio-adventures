@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/csi-portfolio-adventures/", // Remplace par le nom de ton repo GitHub Pages
+  base: "/", // Remplace par le nom de ton repo GitHub Pages
   server: {
     host: "::",
     port: 8080,
