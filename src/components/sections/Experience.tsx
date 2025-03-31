@@ -93,8 +93,7 @@ const Experience = () => {
       period: "2022 - 2024",
       description: [
         "Apprentissage de différents langages de programmation tel que C#, Java, PHP, Python, Laravel, ... Et également de base de donnée avec SQL sur MySql et PgAdmin",
-        "Développement d'applications Web & Mobile, bases de données, programmation orienté objet, MVC",
-        "Deux stages effectué en entreprise d'une période de 6 semaines chacuns"
+        "Développement d'applications Web & Mobile, bases de données, programmation orienté objet, MVC"
       ],
       type: "education",
       accentColor: "bg-accent-sky/50"

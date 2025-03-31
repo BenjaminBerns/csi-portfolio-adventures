@@ -31,7 +31,7 @@ const Contact = () => {
           <p className="section-subtitle mb-2">Me contacter</p>
           <h2 className="section-title mb-6">
             <span className="relative inline-block">
-              Une problématique à résoudre, un défi à relever - Travaillons ensemble !
+              Une problématique à résoudre, un défi à relever, Travaillons ensemble !
               <span className="absolute bottom-1 left-0 w-full h-2 bg-accent-sky/40 -z-10"></span>
             </span>
           </h2>
