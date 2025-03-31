@@ -94,24 +94,24 @@ const About = () => {
           <div className="p-6 rounded-lg border border-accent-sky/20 bg-accent-sky/5">
             <h3 className="text-2xl font-semibold mb-4 text-blue-deep">Mon parcours</h3>
             <p className="text-muted-foreground mb-6">
-              Après mon BTS SIO SLAM (Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers), 
-              j'ai choisi de poursuivre mes études avec un Bachelor CSI pour approfondir mes connaissances et compétences dans le domaine de l'informatique.
+            Après mon BTS SIO SLAM (Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers),
+            j'ai choisi de poursuivre mon projet professionel par un Bachelor CSI pour approfondir mes connaissances et compétences dans le domaine du développement.
             </p>
             <p className="text-muted-foreground">
-              Mon expérience professionnelle, notamment lors de mon alternance chez Kubii, m'a permis d'appliquer mes connaissances 
-              théoriques dans un contexte réel et de développer mes compétences en travaillant sur des projets concrets.
+            Mon expérience, notamment lors de mon alternance chez Kubii,
+            m'a permis de mettre concrètement en pratique mes connaissances théoriques dans le monde de l’entreprise et de développer mes compétences en oeuvrant sur des projets concrets.
             </p>
           </div>
           
           <div className="p-6 rounded-lg border border-accent-lavender/20 bg-accent-lavender/5">
             <h3 className="text-2xl font-semibold mb-4 text-blue-deep">Mes objectifs</h3>
             <p className="text-muted-foreground mb-6">
-              Mon objectif principal est de continuer à me développer en tant que développeur full stack, en restant à jour
-              avec les dernières technologies et les meilleures pratiques du secteur.
+            En accord avec mon projet professionnel, mon objectif prioritaire est de continuer à me développer en tant que développeur full stack,
+            en restant au plus près des dernières technologies et des meilleures pratiques du secteur.
             </p>
             <p className="text-muted-foreground">
-              Je suis particulièrement intéressé par les projets qui présentent des défis techniques et qui me permettent 
-              d'apprendre de nouvelles compétences, tout en contribuant à créer des solutions innovantes et efficaces.
+            Les projets qui intègrent des défis techniques me motivent particulièrement et sont sources pour moi d’acquisition de nouvelles compétences,
+            en contribuant à créer des solutions innovantes et efficaces.
             </p>
           </div>
         </div>

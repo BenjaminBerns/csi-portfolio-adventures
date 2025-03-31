@@ -31,13 +31,14 @@ const Contact = () => {
           <p className="section-subtitle mb-2">Me contacter</p>
           <h2 className="section-title mb-6">
             <span className="relative inline-block">
-              Travaillons ensemble
+              Une problématique à résoudre, un défi à relever,..
+              Travaillons ensemble !
               <span className="absolute bottom-1 left-0 w-full h-2 bg-accent-sky/40 -z-10"></span>
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            N'hésitez pas à me contacter pour discuter de projets, d'opportunités professionnelles 
-            ou simplement pour échanger avec moi !
+            N'hésitez pas à me contacter pour discuter de projets,
+            d'opportunités professionnelles ou simplement pour en savoir plus sur mes motivations !
           </p>
         </div>
         

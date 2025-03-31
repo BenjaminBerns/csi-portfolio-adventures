@@ -22,8 +22,8 @@ const Experience = () => {
       location: "Lyon, Dauphiné",
       period: "2025 - 2027",
       description: [
-        "Approfondissement des connaissannces étudier en BTS et découverte de nouvelles technologies - Angular, Symphony, React, ... ",
-        "Aspect Gestion de projet approfondi avec un projet fil rouge basée autour de la création d'une entreprise fictive répondant à des besoins réel en association avec d'autres filiaires",
+        "Perfectionnement & renforcement des compétences en développement. Approfondissement de la gestion de projet et de l’entreprenariat. ",
+        "Gestion de projet approfondi avec travail en coopération avec d’autres filaires pour créer   une entreprise fictive répondant à des besoins réels & concrets.",
         "Poste en alternance chez ???"
       ],
       type: "education",
@@ -50,8 +50,8 @@ const Experience = () => {
       location: "Lyon, Bachut",
       period: "2024 - 2025",
       description: [
-        "Approfondissement des connaissannces étudier en BTS et découverte de nouvelles technologies - Angular, Symphony, React, ... ",
-        "Projets en équipe sur des enjeux fictifs permettant de mettre en pratique la théorie étudier en cours",
+        "Perfectionnement des connaissances acquises en BTS et ouverture à des nouvelles technologies tel que : Angular, Symphony, React, ... ",
+        " Projets en équipe sur des besoins concrets permettant de mettre en pratique la théorie étudier en cours",
         "Poste en alternance chez Kubii"
       ],
       type: "education",
