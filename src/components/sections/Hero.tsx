@@ -59,7 +59,7 @@ const Hero = () => {
           ref={subtitleRef}
           style={{ opacity: 0 }}
         >
-          Étudiant en Bachelor CSI et diplômé d'un BTS SIO SLAM,
+          Étudiant en MBA Développeur Full-stack et diplômé d'un Bachelor CSI et d'un BTS SIO SLAM,
           <br />passionné par le développement web et les nouvelles technologies.
         </p>
         
