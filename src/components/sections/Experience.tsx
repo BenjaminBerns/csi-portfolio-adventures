@@ -24,7 +24,7 @@ const Experience = () => {
       description: [
         "Perfectionnement & renforcement des compétences en développement. Approfondissement de la gestion de projet et de l’entreprenariat. ",
         "Gestion de projet approfondi avec travail en coopération avec d’autres filaires pour créer   une entreprise fictive répondant à des besoins réels & concrets.",
-        "Poste en alternance chez ???"
+        "Poste en alternance chez Kubii"
       ],
       type: "education",
       accentColor: "bg-accent-teal/50"
