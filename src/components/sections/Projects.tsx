@@ -68,7 +68,7 @@ const Projects = () => {
     {
       id: 5,
       title: "Site référentiel produits",
-      description: "Dans le cadre de mon alternance, j'ai été ammené à proposer des solutions pour améliorer le SAV. Le site que j'ai proposé réperiore tout les produits que nous proposons dans notre boutique accompagné de message de procédure de tests à distance à effectuer avant renvoie de produit",
+      description: "Dans le cadre de mon alternance, j'ai été amené à proposer des solutions pour améliorer le SAV. Le site que j'ai proposé réperiore tout les produits que nous proposons dans notre boutique accompagné de message de procédure de tests à distance à effectuer avant renvoie de produit",
       tags: ["Alternance", "???", "???", "???"],
       image: "../../kubiii.png",
       links: {
