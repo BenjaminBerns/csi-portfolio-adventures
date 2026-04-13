@@ -15,8 +15,22 @@ type Experience = {
 
 const Experience = () => {
   const experiences: Experience[] = [
-    {
+      {
       id: 1,
+      role: "Développeur Ful-Stack",
+      company: "Kubii",
+      location: "Lyon, Limonest",
+      period: "2025 - 2026",
+      description: [
+        "Développement de modules sur le CMS 'Prestashop' (Front & Back)",
+        "Apprentissage des dernières mise à jour de Prestashop -> ajouts de couches symfony sur les dernières versions",
+        "Gestion de la base de donnée MySQL en lien avec le site"
+      ],
+      type: "alternance",
+      accentColor: "bg-accent-lavender/50"
+    },
+    {
+      id: 2,
       role: "MBA Développeur Ful-Stack",
       company: "MyDigitalSchool",
       location: "Lyon, Dauphiné",
@@ -30,7 +44,7 @@ const Experience = () => {
       accentColor: "bg-accent-teal/50"
     },
     {
-      id: 2,
+      id: 3,
       role: "Technicien",
       company: "Kubii",
       location: "Dardilly",
@@ -44,7 +58,7 @@ const Experience = () => {
       accentColor: "bg-accent-lavender/50"
     },
     {
-      id: 3,
+      id: 4,
       role: "Bachelor CSI",
       company: "École ORT",
       location: "Lyon, Bachut",
@@ -58,7 +72,7 @@ const Experience = () => {
       accentColor: "bg-accent-mint/50"
     },
     {
-      id: 4,
+      id: 5,
       role: "Développeur VBA",
       company: "Grand Lyon",
       location: "Lyon",
@@ -72,7 +86,7 @@ const Experience = () => {
       accentColor: "bg-accent-teal/50"
     },
     {
-      id: 5,
+      id: 6,
       role: "Développeur Back-end",
       company: "Decelo",
       location: "Meyzieux",
@@ -86,7 +100,7 @@ const Experience = () => {
       accentColor: "bg-accent-teal/50"
     },
     {
-      id: 6,
+      id: 7,
       role: "BTS SIO SLAM",
       company: "École ORT",
       location: "Lyon, Bachut",
